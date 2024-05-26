@@ -56,3 +56,50 @@ function App() {
   const handleShowPlayers11To20 = () => {
     setRange([11, 20]);
   };
+
+  return (
+    <div className="app">
+      <header className="app__header">
+        <div className="app__logo">
+          <img src="src\assets\logo.jpeg" alt="Logo de Liga de Futbol" />
+        </div>
+
+        <div className="app__contact">
+          <div className="app__contact-item">
+            <span className="material-symbols-outlined">alternate_email</span>
+            <h3>contacto@fpc.com</h3>
+          </div>
+          <div className="app__contact-item">
+            <span className="material-symbols-outlined">call</span>
+            <h3>+1 325 53 2585</h3>
+          </div>
+          <div className="app__contact-item">
+            <span className="material-symbols-outlined">pin_drop</span>
+            <h3>27 Bogotá Colombia</h3>
+          </div>
+        </div>
+
+        <div className="app__register">
+          <h3><a href="#">Comprar boletas</a></h3>
+          <h3><a href="#">Iniciar sesión</a></h3>
+          <h3><a href="#">Registrar</a></h3>
+          <span className="material-symbols-outlined">shopping_cart</span>
+        </div>
+
+        <div className="app__search">
+          <h5>Busqueda</h5>
+          <span className="material-symbols-outlined">search</span>
+        </div>
+
+        <nav className="app__menu">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Enterate</a></li>
+            <li><a href="#">Equipos</a></li>
+            <li><a href="#">Partidos</a></li>
+            <li><a href="#">Páginas</a></li>
+            <li><a href="#">Comprar merch oficial</a></li>
+            <li><a href="#">Boletas</a></li>
+          </ul>
+        </nav>
+      </header>
