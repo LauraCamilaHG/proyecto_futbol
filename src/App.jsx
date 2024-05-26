@@ -112,3 +112,68 @@ function App() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <section className="app__buttons">
+        <input
+          type="text"
+          className="app__buttons-search-bar"
+          placeholder="Buscar por nombre jugador..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <div className="app__buttons-controls">
+          <button onClick={handleHighlightEvenRows}>Filas Impares</button>
+          <button onClick={handleHighlightOddRows}>Filas Pares</button>
+          <button onClick={handleShowPlayers1To10}>Traer de 1 a 10</button>
+          <button onClick={handleShowPlayers11To20}>Traer de 11 a 20</button>
+        </div>
+      </section>
+
+      <section className="app__table">
+        <h2>TOP SCORERS</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>PLAYER</th>
+              <th>POSITION</th>
+              <th>GOALS</th>
+              <th>AGE</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredPlayers.map((player, index) => (
+              <tr
+                key={player.id}
+                className={
+                  highlightEvenRows && index % 2 === 0
+                    ? 'highlight'
+                    : highlightOddRows && index % 2 !== 0
+                    ? 'highlight-odd'
+                    : ''
+                }
+              >
+                <td>{player.id}</td>
+                <td>{player.name}</td>
+                <td>{player.position}</td>
+                <td>{player.goals}</td>
+                <td>{player.age}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+
+      <footer className="app__footer">
+        <div className="app__footer-icons">
+          <img src="/path/to/Insta.png" alt="Instagram" />
+          <img src="/path/to/pinterest.png" alt="Pinterest" />
+          <img src="/path/to/telegram.png" alt="Telegram" />
+          <img src="/path/to/Tiktok.png" alt="Tiktok" />
+          <img src="/path/to/X.png" alt="X" />
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
