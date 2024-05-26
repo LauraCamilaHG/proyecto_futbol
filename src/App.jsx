@@ -157,11 +157,11 @@ function App() {
 
       <footer className="app__footer">
         <div className="app__footer-icons">
-          <img src="/path/to/Insta.png" alt="Instagram" />
-          <img src="/path/to/pinterest.png" alt="Pinterest" />
-          <img src="/path/to/telegram.png" alt="Telegram" />
-          <img src="/path/to/Tiktok.png" alt="Tiktok" />
-          <img src="/path/to/X.png" alt="X" />
+          <img src="src\assets\instagram.jpg" alt="Instagram" />
+          <img src="src\assets\Pinterest-logo.png" alt="Pinterest" />
+          <img src="src\assets\telegram.png" alt="Telegram" />
+          <img src="src\assets\TikTok.png" alt="Tiktok" />
+          <img src="src\assets\x.png" alt="X" />
         </div>
       </footer>
     </div>
