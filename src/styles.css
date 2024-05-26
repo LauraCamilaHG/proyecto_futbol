@@ -141,3 +141,66 @@
   background-color: #333;
   color:white; /* Modificacion */
 }
+
+/* Pie de página */
+.app__footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.app__footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.app__footer-icons img {
+  width: 30px;
+}
+
+/* Highlight class */
+.highlight {
+  background-color: yellow;
+}
+
+.highlight-odd {
+  background-color: rgb(16, 216, 16);
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .app__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app__contact, .app__register, .app__search {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .app__menu ul {
+    flex-direction: column;
+  }
+
+  .app__buttons-search-bar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app__contact-item h3, .app__register h3, .app__search h5 {
+    font-size: 14px;
+  }
+
+  .app__footer-icons img {
+    width: 25px;
+  }
+
+  .app__buttons-controls button {
+    padding: 8px 15px;
+  }
+}
