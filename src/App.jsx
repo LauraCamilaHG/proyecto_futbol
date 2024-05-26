@@ -103,3 +103,12 @@ function App() {
           </ul>
         </nav>
       </header>
+      
+      <section className="app__buttons">
+        <input
+          type="text"
+          className="app__buttons-search-bar"
+          placeholder="Buscar por nombre jugador..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
