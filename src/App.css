@@ -1,42 +1,241 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white; /* Fondo blanco para toda la página */
+}
+
+.app {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Encabezado */
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #060725;
+  padding: 10px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.app__logo img {
+  height: 100px; /* Ajusta la altura según sea necesario */
+  max-height: 100%; /* Asegura que el logo no exceda la altura del encabezado */
+}
+
+.app__contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.app__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.app__contact-item i {
+  margin-right: 5px;
+}
+
+.app__contact-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.app__register {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app__register-button {
+  color: white;
+  text-decoration: none;
+  background-color: #4b76a3d0;
+  padding: 1px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.app__register-button:hover {
+  background-color: #0056b3;
+}
+
+.app__search {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.app__search input {
+  color: black; /* Color negro para el texto del campo de búsqueda */
+  background-color: white
+}
+
+.app__menu {
+  background-color: #060725;
+  width: 100%;
+}
+
+.app__menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.app__menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.app__menu a:hover {
+  background-color: #333;
+}
+
+/* Sección de botones */
+.app__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.app__buttons-search-bar {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  max-width: 300px;
+  background-color: white; /* Fondo blanco para el campo de búsqueda */
+  border: 1px solid #ddd; /* Añade un borde gris claro */
+  color: black; /* Color negro para el texto del campo de búsqueda */
+}
+
+.app__buttons-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.app__buttons-controls button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.app__buttons-controls button:hover {
+  background-color: #0056b3;
+}
+
+/* Tabla de goleadores */
+.app__table {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.app__table h2 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app__table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white; /* Fondo blanco para toda la tabla */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.app_table th, .app_table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.app__table th {
+  background-color: #060725;
+  color: white;
+  border-bottom: 3px solid #ff0000; /* Red bottom border */
+}
+
+.app__table td {
+  color: #333;
+}
+
+/* Pie de página */
+.app__footer {
+  background-color: #ffffff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.app__footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.app__footer-icons img {
+  width: 30px;
+}
+
+/* Highlight class */
+.highlight {
+  background-color: yellow;
+}
+
+.highlight-odd {
+  background-color: rgb(16, 216, 16);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .app__header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app_contact, .appregister, .app_search {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .app__menu ul {
+    flex-direction: column;
+  }
+
+  .app__buttons-search-bar {
+    width: 100%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  .app_contact-item h3, .appregister h3, .app_search h5 {
+    font-size: 14px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .app__footer-icons img {
+    width: 25px;
+  }
 
-.read-the-docs {
-  color: #888;
+  .app__buttons-controls button {
+    padding: 8px 15px;
+  }
 }
