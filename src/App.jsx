@@ -112,14 +112,6 @@ function App() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <section className="app__buttons">
-        <input
-          type="text"
-          className="app__buttons-search-bar"
-          placeholder="Buscar por nombre jugador..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
         <div className="app__buttons-controls">
           <button onClick={handleHighlightEvenRows}>Filas Impares</button>
           <button onClick={handleHighlightOddRows}>Filas Pares</button>
