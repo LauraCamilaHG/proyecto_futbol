@@ -1,5 +1,12 @@
-.app {
+body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white; /* Fondo blanco para toda la página */
+}
+
+.app {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,8 +17,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(6, 7, 37, 0.384);
-  padding: 10px;
+  background-color: #060725;
+  padding: 1px;
   color: white;
   flex-wrap: wrap;
 }
@@ -31,6 +38,16 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  font-size: 14px;
+}
+
+.app__contact-item i {
+  margin-right: 5px;
+}
+
+.app__contact-item a {
+  color: white;
+  text-decoration: none;
 }
 
 .app__register {
@@ -54,8 +71,12 @@
   color: white;
 }
 
+.app__search input {
+  color: black; /* Color negro para el texto del campo de búsqueda */
+}
+
 .app__menu {
-  background-color: #444;
+  background-color: #060725;
   width: 100%;
 }
 
@@ -77,7 +98,7 @@
 }
 
 .app__menu a:hover {
-  background-color: #555;
+  background-color: #333;
 }
 
 /* Sección de botones */
@@ -93,6 +114,9 @@
   margin-bottom: 10px;
   width: 80%;
   max-width: 300px;
+  background-color: white; /* Fondo blanco para el campo de búsqueda */
+  border: 1px solid #ddd; /* Añade un borde gris claro */
+  color: black; /* Color negro para el texto del campo de búsqueda */
 }
 
 .app__buttons-controls {
@@ -129,6 +153,7 @@
 .app__table table {
   width: 100%;
   border-collapse: collapse;
+  background-color: white; /* Fondo blanco para toda la tabla */
 }
 
 .app_table th, .app_table td {
@@ -138,13 +163,18 @@
 }
 
 .app__table th {
-  background-color: #333;
-  color:white; /* Modificacion */
+  background-color: #060725;
+  color: white;
+  border-bottom: 3px solid #ff0000; /* Red bottom border */
+}
+
+.app__table td {
+  color: #333;
 }
 
 /* Pie de página */
 .app__footer {
-  background-color: #333;
+  background-color: #ffffff;
   color: white;
   text-align: center;
   padding: 20px;
@@ -169,7 +199,6 @@
   background-color: rgb(16, 216, 16);
 }
 
-
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
   .app__header {
@@ -177,7 +206,7 @@
     align-items: flex-start;
   }
 
-  .app__contact, .app__register, .app__search {
+  .app_contact, .appregister, .app_search {
     justify-content: center;
     margin-bottom: 10px;
   }
@@ -192,7 +221,7 @@
 }
 
 @media (max-width: 480px) {
-  .app__contact-item h3, .app__register h3, .app__search h5 {
+  .app_contact-item h3, .appregister h3, .app_search h5 {
     font-size: 14px;
   }
 
